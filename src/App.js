@@ -20,9 +20,7 @@ class App extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.nameImage !== this.state.nameImage) {
-      setTimeout(() => {
-        this.getImages();
-      }, 2000);
+      this.getImages();
     }
   }
 

@@ -4,7 +4,7 @@ import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem';
 class ImageGallery extends Component {
   render() {
     const { nameImage, onClick } = this.props;
-    console.log(nameImage);
+    // console.log(nameImage);
 
     return (
       <ul className="gallery">
