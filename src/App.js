@@ -52,6 +52,7 @@ class App extends Component {
     this.setState({
       nameImage: data.toLowerCase(),
       arrayImage: [],
+      page: 1,
     });
   };
 
@@ -85,9 +86,9 @@ class App extends Component {
     return (
       <div>
         <Searchbar onSubmit={this.onSubmit} />
-        {<Loader /> && (
-          <ImageGallery nameImage={arrayImage} onClick={this.onclickImg} />
-        )}
+
+        <ImageGallery nameImage={arrayImage} onClick={this.onclickImg} />
+
         {needToShowLoadMore && (
           <Button onPage={page} onLoadMore={this.getImages} />
         )}
@@ -97,6 +98,7 @@ class App extends Component {
             <img src={largeImageURL} alt="" />
           </Modal>
         )}
+        {isLoading && <Loader />}
       </div>
     );
   }
