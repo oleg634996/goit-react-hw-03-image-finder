@@ -30,10 +30,10 @@ class App extends Component {
           isLoading: false,
         }));
       });
-      console.log(prevState.page, 'prevstate');
-      console.log(page, 'page');
-      console.log(prevState.title, 'prevtitle');
-      console.log(title);
+      // console.log(prevState.page, 'prevstate');
+      // console.log(page, 'page');
+      // console.log(prevState.title, 'prevtitle');
+      // console.log(title);
     }
   }
 

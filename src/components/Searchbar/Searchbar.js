@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { toast } from 'react-toastify';
+import PropTypes from 'prop-types';
 
 class Searchbar extends Component {
   state = {
@@ -53,3 +54,7 @@ class Searchbar extends Component {
   }
 }
 export default Searchbar;
+
+Searchbar.propTypes = {
+  onSubmit: PropTypes.func,
+};
