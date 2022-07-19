@@ -26,9 +26,9 @@ class Searchbar extends Component {
     this.setState({ title: inputValue });
   };
 
-  // reset = () => {
-  //   this.setState({ title: '' });
-  // };
+  reset = () => {
+    this.setState({ title: '' });
+  };
 
   render() {
     // console.log(this.state.title);
@@ -44,6 +44,7 @@ class Searchbar extends Component {
             type="text"
             autoComplete="on"
             autoFocus
+            onMouseDown={() => this.reset()}
             onChange={this.onChange}
             value={this.state.title}
             placeholder="Search images and photos"

@@ -1,5 +1,5 @@
 // import { Component } from 'react';
-
+import PropTypes from 'prop-types';
 export default function ImageGalleryItem({ onImage, onClick }) {
   const { webformatURL, tags, largeImageURL } = onImage;
   const fullImage = () => onClick(largeImageURL);
@@ -9,3 +9,8 @@ export default function ImageGalleryItem({ onImage, onClick }) {
     </li>
   );
 }
+
+ImageGalleryItem.propTypes = {
+  onImage: PropTypes.object,
+  onClick: PropTypes.func,
+};

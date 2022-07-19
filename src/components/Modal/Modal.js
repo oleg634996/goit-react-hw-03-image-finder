@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Modal extends Component {
   componentDidMount() {
@@ -23,3 +24,8 @@ class Modal extends Component {
   }
 }
 export default Modal;
+
+Modal.propTypes = {
+  onClose: PropTypes.func,
+  onOpenImg: PropTypes.func,
+};
