@@ -15,7 +15,9 @@ class Modal extends Component {
   render() {
     return (
       <div onClick={this.props.onClose} className="overlay">
-        <div className="modal">{this.props.children}</div>
+        <div className="modal">
+          <img src={this.props.onOpenImg} alt="" />
+        </div>
       </div>
     );
   }

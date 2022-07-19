@@ -3,17 +3,16 @@ import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem';
 
 class ImageGallery extends Component {
   render() {
-    const { nameImage, onClick } = this.props;
-    // console.log(nameImage);
+    const { onRenderImg, onClick } = this.props;
 
     return (
       <ul className="gallery">
-        {nameImage.map(nameImg => {
+        {onRenderImg.map(image => {
           return (
             <ImageGalleryItem
-              image={nameImg}
-              key={nameImg.id}
-              onClickImg={onClick}
+              onImage={image}
+              key={image.id}
+              onClick={onClick}
             />
           );
         })}
