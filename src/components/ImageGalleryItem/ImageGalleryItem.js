@@ -12,5 +12,8 @@ export default function ImageGalleryItem({ onImage, onClick }) {
 
 ImageGalleryItem.propTypes = {
   onImage: PropTypes.object,
+  webformatURL: PropTypes.string,
   onClick: PropTypes.func,
+  tags: PropTypes.string,
+  largeImageURL: PropTypes.string,
 };

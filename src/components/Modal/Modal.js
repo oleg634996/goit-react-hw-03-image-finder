@@ -13,9 +13,17 @@ class Modal extends Component {
       this.props.onClose();
     }
   };
+
   render() {
     return (
-      <div onClick={this.props.onClose} className="overlay">
+      <div
+        className="overlay"
+        onClick={event => {
+          if (event.target.className) {
+            this.props.onClose();
+          }
+        }}
+      >
         <div className="modal">
           <img src={this.props.onOpenImg} alt="" />
         </div>
@@ -27,5 +35,5 @@ export default Modal;
 
 Modal.propTypes = {
   onClose: PropTypes.func,
-  onOpenImg: PropTypes.func,
+  onOpenImg: PropTypes.string,
 };

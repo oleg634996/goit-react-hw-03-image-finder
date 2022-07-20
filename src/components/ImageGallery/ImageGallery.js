@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 class ImageGallery extends Component {
   render() {
     const { onRenderImg, onClick } = this.props;
-
     return (
       <ul className="gallery">
         {onRenderImg.map(image => {
@@ -25,6 +24,6 @@ class ImageGallery extends Component {
 export default ImageGallery;
 
 ImageGallery.propTypes = {
-  onRenderImg: PropTypes.array,
+  onRenderImg: PropTypes.object,
   onClick: PropTypes.func,
 };

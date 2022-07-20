@@ -38,13 +38,15 @@ class App extends Component {
   }
 
   onSubmit = data => {
-    console.log(data, 'data');
-    this.setState({
-      title: data,
-      searhImg: [],
-      page: 1,
-      isLoading: true,
-    });
+    if (this.state.title !== data) {
+      this.setState({
+        title: data,
+        searhImg: [],
+        page: 1,
+        isLoading: true,
+      });
+    }
+
     toast.warn(`по этому запросу  не чего нет`);
   };
 
@@ -60,7 +62,7 @@ class App extends Component {
     this.togglModal();
   };
 
-  togglModal = () => {
+  togglModal = event => {
     this.setState(({ showModal }) => ({
       showModal: !showModal,
     }));
